@@ -16,6 +16,7 @@ public class AutoAppConfigTest {
 
         //when
         MemberService memberService = ac.getBean(MemberService.class);
+
         Assertions.assertThat(memberService).isInstanceOf(MemberService.class);
     }
 }
