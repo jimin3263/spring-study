@@ -1,4 +1,4 @@
-package lifecycle;
+package hello.core.lifecycle;
 
 
 import javax.annotation.PostConstruct;
