@@ -11,6 +11,7 @@ import javax.persistence.Id
 class Todo (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     var id: Long? = null,
 
     @Column(nullable = false)

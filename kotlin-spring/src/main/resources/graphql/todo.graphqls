@@ -1,0 +1,7 @@
+type Todo {
+    id: Int!,
+    completed: Boolean!,
+    todoName: String!
+}
+
+

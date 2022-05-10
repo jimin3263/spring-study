@@ -1,0 +1,11 @@
+type Query{
+    getTodos : [Todo]
+}
+
+input TodoRequest{
+    todoName: String!
+}
+
+type Mutation{
+    createTodo(todoRequest: TodoRequest!):Todo
+}
