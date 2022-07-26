@@ -80,7 +80,4 @@ public class TemplateMethodTest {
         log.info("클래스 이름2={}", template2.getClass()); //TemplateMethodTest$2
         template2.execute();
     }
-
-
-
 }
