@@ -24,7 +24,7 @@ public class FieldLogTrace implements LogTrace{
         return new TraceStatus(traceId, startTimeMs, message);
     }
 
-    //traceId 없으면 새로 생성, 없다면 같은 트랜잭션 아이디에 레벨 증가
+    //traceId 없으면 새로 생성, 있다면 같은 트랜잭션 아이디에 레벨 증가
     private void syncTraceId(){
         if(traceIdHolder == null){
             traceIdHolder = new TraceId();

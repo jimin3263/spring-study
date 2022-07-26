@@ -3,7 +3,7 @@ package hello.advanced.trace.template;
 import hello.advanced.trace.TraceStatus;
 import hello.advanced.trace.logtrace.LogTrace;
 
-public abstract class AbstractTemplate<T> {
+public abstract class AbstractTemplate<T> { //타입 T를 객체 생성 시점으로 미룬다
 
     private final LogTrace trace;
 

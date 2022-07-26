@@ -42,6 +42,9 @@ public class TemplateMethodTest {
         log.info("resultTime={}", resultTime);
     }
 
+    //비즈니스 로직을 제외하면 코드가 같다 -> 템플릿 메서드 패턴 이용해서 변하는 부분 변하지 않는 부분 분리해 적용 가능
+
+
     /**
      * 템플릿 메서드 패턴 적용
      */
@@ -54,15 +57,30 @@ public class TemplateMethodTest {
         template2.execute();
     }
 
+    /**
+     * 익명 내부 클래스 사용
+     */
     @Test
     public void templateMethodV2() throws Exception{
-        //given
         AbstractTemplate template1 = new AbstractTemplate() {
             @Override
             protected void call() {
                 log.info("비즈니스 로직1 실행");
             }
         };
+        log.info("클래스 이름1={}", template1.getClass()); //TemplateMethodTest$1 내부 클래스 이므로 $로 구분, 임의로 내부 클래스 명을 지정함
         template1.execute();
+
+        AbstractTemplate template2 = new AbstractTemplate() {
+            @Override
+            protected void call() {
+                log.info("비즈니스 로직2 실행");
+            }
+        };
+        log.info("클래스 이름2={}", template2.getClass()); //TemplateMethodTest$2
+        template2.execute();
     }
+
+
+
 }

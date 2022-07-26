@@ -24,6 +24,5 @@ public class OrderServiceV4 {
         };
 
         abstractTemplate.execute("OrderService.request()");
-
     }
 }
